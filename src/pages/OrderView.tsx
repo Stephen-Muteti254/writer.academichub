@@ -214,7 +214,7 @@ export default function OrderView() {
 
           <Button 
             variant="outline"
-            onClick={() => navigate(`/writer/chats?order=${order.id}&client=${order.client_id}`)}
+            onClick={() => navigate(`/chats?order=${order.id}&client=${order.client_id}`)}
           >
             <MessageSquare className="h-4 w-4 mr-2" />
             Message Client

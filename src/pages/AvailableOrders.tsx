@@ -68,7 +68,7 @@ export default function AvailableOrders() {
 
   // Redirect invalid tab
   if (!["all", "invited", "declined"].includes(tab)) {
-    return <Navigate to="/writer/available-orders/all" replace />;
+    return <Navigate to="/available-orders/all" replace />;
   }
 
   const handleDecline = async () => {
@@ -236,7 +236,7 @@ export default function AvailableOrders() {
               ].map((t) => (
                 <button
                   key={t.key}
-                  onClick={() => navigate(`/writer/available-orders/${t.key}`)}
+                  onClick={() => navigate(`/available-orders/${t.key}`)}
                   className={`pb-1 px-2 text-sm font-medium transition-colors ${
                     tab === t.key
                       ? "border-b-2 border-primary text-primary"
@@ -428,7 +428,7 @@ export default function AvailableOrders() {
                   focus-within:shadow-md
                   border
                 "
-                onClick={() => navigate(`/writer/order-details/${order.id}`)}
+                onClick={() => navigate(`/order-details/${order.id}`)}
               >
                 <CardHeader className="p-2 pl-6 pb-1">
                   <CardTitle className="text-base font-semibold">
@@ -474,7 +474,7 @@ export default function AvailableOrders() {
                           className="rounded-none border-0 shadow-none"
                           onClick={() => {
                             e.stopPropagation();
-                            navigate(`/writer/order-details/${order.id}`);
+                            navigate(`/order-details/${order.id}`);
                           }}
                         >
                           <Eye className="h-4 w-4 mr-1" />

@@ -211,7 +211,7 @@ export default function EditBid() {
         description: "Your changes have been saved.",
       });
 
-      navigate("/writer/my-bids");
+      navigate("/my-bids");
     } catch (error: any) {
       console.error(error);
       toast({
@@ -259,7 +259,7 @@ export default function EditBid() {
         description: "Your bid has been confirmed and submitted.",
       });
 
-      navigate("/writer/my-bids");
+      navigate("/my-bids");
     } catch (error: any) {
       console.error(error);
       toast({
@@ -391,7 +391,7 @@ export default function EditBid() {
                 <Button
                   className="hidden sm:flex"
                   onClick={() =>
-                    navigate(`/writer/my-bids/edit/${bidId}`, {
+                    navigate(`/my-bids/edit/${bidId}`, {
                       state: { viewOnly: false }
                     })
                   }
@@ -403,7 +403,7 @@ export default function EditBid() {
                   variant="outline"
                   className="hidden sm:flex"
                   onClick={() =>
-                    navigate(`/writer/my-bids/edit/${bidId}`, {
+                    navigate(`/my-bids/edit/${bidId}`, {
                       state: { viewOnly: false }
                     })
                   }
@@ -442,7 +442,7 @@ export default function EditBid() {
             <OrderInfoCard
               order={order}
               defaultExpanded={true}
-              onViewFullDetails={() => navigate(`/writer/available-orders/${order.id}`)}
+              onViewFullDetails={() => navigate(`/available-orders/${order.id}`)}
               onDownloadFile={handleDownloadFile}
               onPreviewFile={handlePreviewFile}
             />
@@ -505,7 +505,7 @@ export default function EditBid() {
                 <Button
                   className="w-full"
                   onClick={() =>
-                    navigate(`/writer/my-bids/edit/${bidId}`, {
+                    navigate(`/my-bids/edit/${bidId}`, {
                       state: { viewOnly: false }
                     })
                   }
@@ -517,7 +517,7 @@ export default function EditBid() {
                   variant="outline"
                   className="w-full"
                   onClick={() =>
-                    navigate(`/writer/my-bids/edit/${bidId}`, {
+                    navigate(`/my-bids/edit/${bidId}`, {
                       state: { viewOnly: false }
                     })
                   }
@@ -608,7 +608,7 @@ export default function EditBid() {
           <OrderInfoCard
             order={order}
             defaultExpanded={false}
-            onViewFullDetails={() => navigate(`/writer/available-orders/${order.id}`)}
+            onViewFullDetails={() => navigate(`/available-orders/${order.id}`)}
             onDownloadFile={handleDownloadFile}
             onPreviewFile={handlePreviewFile}
           />

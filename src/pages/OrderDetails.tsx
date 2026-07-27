@@ -144,7 +144,7 @@ export default function OrderDetails() {
         title: "Order Declined",
         description: "You will no longer see this order.",
       });
-      navigate("/writer/available-orders/declined");
+      navigate("/available-orders/declined");
     } catch (err: any) {
       toast({
         title: "Error",
@@ -225,7 +225,7 @@ export default function OrderDetails() {
               <ArrowLeft className="h-4 w-4" />
               Back to Available Orders
             </Button>
-            <Button onClick={() => navigate(`/writer/place-bid/${order.id}`)}>
+            <Button onClick={() => navigate(`/place-bid/${order.id}`)}>
               Place Bid
             </Button>
           </div>
@@ -442,7 +442,7 @@ export default function OrderDetails() {
               size="lg"
               className="w-full"
               variant="outline"
-              onClick={() => navigate(`/writer/chats?order=${order.id}`)}
+              onClick={() => navigate(`/chats?order=${order.id}`)}
             >
               <MessageSquare className="h-4 w-4 mr-2" />
               Message Client
@@ -455,7 +455,7 @@ export default function OrderDetails() {
                 size="lg"
                 className="w-full"
                 variant="outline"
-                onClick={() => navigate(`/writer/place-bid/${order.id}`)}
+                onClick={() => navigate(`/place-bid/${order.id}`)}
               >
                 Place Your Bid
               </Button>

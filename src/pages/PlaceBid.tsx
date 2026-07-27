@@ -132,7 +132,7 @@ export default function PlaceBid() {
       });
 
       const chatParam = bidData.chat_id ? `?chat=${bidData.chat_id}` : "";
-      navigate(`/writer/my-bids`);
+      navigate(`/my-bids`);
     } catch (error: any) {
       console.error(error);
       toast({

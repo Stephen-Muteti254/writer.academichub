@@ -58,7 +58,7 @@ export default function MyBids() {
   const LIMIT = 10;
 
   if (!["open", "unconfirmed", "declined", "cancelled"].includes(tab)) {
-    return <Navigate to="/writer/my-bids/open" replace />;
+    return <Navigate to="/my-bids/open" replace />;
   }
 
   const fetchBids = async (reset = false, pageNum = 1) => {
@@ -172,7 +172,7 @@ export default function MyBids() {
               {["open", "unconfirmed", "declined", "cancelled"].map((status) => (
                 <button
                   key={status}
-                  onClick={() => navigate(`/writer/my-bids/${status}`)}
+                  onClick={() => navigate(`/my-bids/${status}`)}
                   className={`pb-1 px-2 text-sm font-medium transition-colors ${
                     tab === status
                       ? "border-b-2 border-primary text-primary"
@@ -230,7 +230,7 @@ export default function MyBids() {
                     key={bid.id}
                     className="cursor-pointer"
                     onClick={() =>
-                      navigate(`/writer/my-bids/view/${bid.id}`, {
+                      navigate(`/my-bids/view/${bid.id}`, {
                         state: { viewOnly: true }
                       })
                     }
@@ -258,7 +258,7 @@ export default function MyBids() {
                           className="rounded-none border-0 shadow-none"
                           onClick={() =>{
                             e.stopPropagation();
-                            navigate(`/writer/my-bids/view/${bid.id}`, {
+                            navigate(`/my-bids/view/${bid.id}`, {
                               state: { viewOnly: true }
                             })
                           }}
@@ -275,7 +275,7 @@ export default function MyBids() {
                               className="rounded-none border-0 shadow-none"
                               onClick={(e) => {
                                 e.stopPropagation();
-                                navigate(`/writer/my-bids/edit/${bid.id}`)}
+                                navigate(`/my-bids/edit/${bid.id}`)}
                               }
                             >
                               <Edit className="h-4 w-4" />

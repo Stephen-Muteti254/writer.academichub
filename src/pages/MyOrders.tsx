@@ -37,7 +37,7 @@ export default function MyOrders() {
   const loadingRef = useRef(false);
 
   if (!parentTab || !["in-progress", "completed", "cancelled"].includes(parentTab)) {
-    return <Navigate to="/writer/orders/in-progress/all" replace />;
+    return <Navigate to="/orders/in-progress/all" replace />;
   }
 
   /** Backend status mapper */
@@ -143,7 +143,7 @@ export default function MyOrders() {
               {["in-progress", "completed", "cancelled"].map(tab => (
                 <button
                   key={tab}
-                  onClick={() => navigate(`/writer/orders/${tab}/all`)}
+                  onClick={() => navigate(`/orders/${tab}/all`)}
                   className={`pb-1 px-2 text-sm font-medium transition-colors ${
                     parentTab === tab
                       ? "border-b-2 border-primary text-primary"
@@ -206,7 +206,7 @@ export default function MyOrders() {
           {parentTab === "in-progress" && (
             <Tabs
               value={subTab}
-              onValueChange={value => navigate(`/writer/orders/in-progress/${value}`)}
+              onValueChange={value => navigate(`/orders/in-progress/${value}`)}
             >
               <TabsList>
                 <TabsTrigger value="all">All</TabsTrigger>

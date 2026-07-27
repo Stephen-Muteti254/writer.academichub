@@ -40,7 +40,7 @@ export default function Balance() {
   const { toast } = useToast();
 
   if (!TABS.includes(tab)) {
-    return <Navigate to="/writer/balance/transactions" replace />;
+    return <Navigate to="/balance/transactions" replace />;
   }
 
   // -----------------------------
@@ -475,7 +475,7 @@ export default function Balance() {
               {TABS.map((t) => (
                 <button
                   key={t}
-                  onClick={() => navigate(`/writer/balance/${t}`)}
+                  onClick={() => navigate(`/balance/${t}`)}
                   className={`pb-1 px-2 text-sm font-medium transition-colors ${
                     tab === t
                       ? "border-b-2 border-primary text-primary"
