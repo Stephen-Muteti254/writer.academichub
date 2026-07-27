@@ -129,10 +129,6 @@ const App = () => (
                           <Route path="leaderboard" element={<Leaderboard />} />
                           <Route path="balance/:tab" element={<Balance />} />
                           <Route path="notifications" element={<Notifications />} />
-                          <Route
-                            path="notifications-settings"
-                            element={<NotificationSettings />}
-                          />
 
                           <Route path="*" element={<NotFound />} />
 
