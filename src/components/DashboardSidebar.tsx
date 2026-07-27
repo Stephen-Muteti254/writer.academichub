@@ -45,13 +45,13 @@ import LightLogo from "@/assets/light-mini-logo.PNG";
 import DarkLogo from "@/assets/dark-mini-logo.PNG";
 
 const menuItems = [
-  { title: "My Orders", url: "/writer/orders/in-progress/all", base: "/writer/orders", icon: FileText },
-  { title: "Available Orders", url: "/writer/available-orders/all", base: "/writer/available-orders", icon: Search },
-  { title: "My Bids", url: "/writer/my-bids/open", base: "/writer/my-bids", icon: Gavel },
-  { title: "Chats", url: "/writer/chats", icon: MessageSquare },
-  { title: "Leaderboard", url: "/writer/leaderboard", icon: Trophy },
-  { title: "Balance", url: "/writer/balance/transactions", base: "/writer/balance", icon: Wallet },
-  { title: "Notifications", url: "/writer/notifications", icon: Bell },
+  { title: "My Orders", url: "/orders/in-progress/all", base: "/orders", icon: FileText },
+  { title: "Available Orders", url: "/available-orders/all", base: "/available-orders", icon: Search },
+  { title: "My Bids", url: "/my-bids/open", base: "/my-bids", icon: Gavel },
+  { title: "Chats", url: "/chats", icon: MessageSquare },
+  { title: "Leaderboard", url: "/leaderboard", icon: Trophy },
+  { title: "Balance", url: "/balance/transactions", base: "/balance", icon: Wallet },
+  { title: "Notifications", url: "/notifications", icon: Bell },
 ];
 
 export function DashboardSidebar() {

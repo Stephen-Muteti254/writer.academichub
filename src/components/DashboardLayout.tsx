@@ -21,10 +21,10 @@ export default function DashboardLayout({ noPadding }: DashboardLayoutProps) {
   const { user } = useAuth();
 
   const disablePadding =
-    noPadding || location.pathname.includes("/writer/chats") ||
-    location.pathname.includes("/writer/my-bids/view") ||
-    location.pathname.includes("/writer/my-bids/edit") ||
-    location.pathname.includes("/writer/order-view");
+    noPadding || location.pathname.includes("/chats") ||
+    location.pathname.includes("/my-bids/view") ||
+    location.pathname.includes("/my-bids/edit") ||
+    location.pathname.includes("/order-view");
 
   return (
     <SidebarProvider defaultOpen={true}>
